@@ -1,0 +1,46 @@
+C:\Users\Nguyen Duc De\Desktop\App Chat\ChatWinformC-\Server\bin\Debug\Server.exe.config
+C:\Users\Nguyen Duc De\Desktop\App Chat\ChatWinformC-\Server\bin\Debug\Server.exe
+C:\Users\Nguyen Duc De\Desktop\App Chat\ChatWinformC-\Server\bin\Debug\Server.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\ChatWinformC-\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\Nguyen Duc De\Desktop\App Chat\ChatWinformC-\Server\obj\Debug\Server.Views.Main.resources
+C:\Users\Nguyen Duc De\Desktop\App Chat\ChatWinformC-\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+C:\Users\Nguyen Duc De\Desktop\App Chat\ChatWinformC-\Server\obj\Debug\Server.exe
+C:\Users\Nguyen Duc De\Desktop\App Chat\ChatWinformC-\Server\obj\Debug\Server.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\ChatWinformC-\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Nguyen Duc De\Desktop\App Chat\Chat-DHDaLat\Server\bin\Debug\Server.exe.config
+C:\Users\Nguyen Duc De\Desktop\App Chat\Chat-DHDaLat\Server\bin\Debug\Server.exe
+C:\Users\Nguyen Duc De\Desktop\App Chat\Chat-DHDaLat\Server\bin\Debug\Server.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\Chat-DHDaLat\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Nguyen Duc De\Desktop\App Chat\Chat-DHDaLat\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\Nguyen Duc De\Desktop\App Chat\Chat-DHDaLat\Server\obj\Debug\Server.Views.Main.resources
+C:\Users\Nguyen Duc De\Desktop\App Chat\Chat-DHDaLat\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+C:\Users\Nguyen Duc De\Desktop\App Chat\Chat-DHDaLat\Server\obj\Debug\Server.exe
+C:\Users\Nguyen Duc De\Desktop\App Chat\Chat-DHDaLat\Server\obj\Debug\Server.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform\Server\bin\Debug\Server.exe.config
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform\Server\obj\Debug\Server.exe
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform\Server\obj\Debug\Server.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform\Server\bin\Debug\Server.exe
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform\Server\bin\Debug\Server.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform\Server\obj\Debug\Server.Views.MainServer.resources
+C:\Users\Admin\Desktop\Application_Chat_Winform-master\Server\bin\Debug\Server.exe.config
+C:\Users\Admin\Desktop\Application_Chat_Winform-master\Server\bin\Debug\Server.exe
+C:\Users\Admin\Desktop\Application_Chat_Winform-master\Server\bin\Debug\Server.pdb
+C:\Users\Admin\Desktop\Application_Chat_Winform-master\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Application_Chat_Winform-master\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\Admin\Desktop\Application_Chat_Winform-master\Server\obj\Debug\Server.Views.MainServer.resources
+C:\Users\Admin\Desktop\Application_Chat_Winform-master\Server\obj\Debug\Server.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Application_Chat_Winform-master\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Application_Chat_Winform-master\Server\obj\Debug\Server.exe
+C:\Users\Admin\Desktop\Application_Chat_Winform-master\Server\obj\Debug\Server.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform-master\Server\bin\Debug\Server.exe.config
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform-master\Server\obj\Debug\Server.exe
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform-master\Server\obj\Debug\Server.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform-master\Server\bin\Debug\Server.exe
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform-master\Server\bin\Debug\Server.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform-master\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform-master\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform-master\Server\obj\Debug\Server.Views.MainServer.resources
+C:\Users\Nguyen Duc De\Desktop\App Chat\Application_Chat_Winform-master\Server\obj\Debug\Server.csproj.GenerateResource.Cache

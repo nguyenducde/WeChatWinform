@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainClient));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lv_ChatClient = new System.Windows.Forms.ListBox();
             this.bunifuosSwitch = new Bunifu.Framework.UI.BunifuiOSSwitch();
             this.lbListRoom = new System.Windows.Forms.Label();
             this.lbCreate = new System.Windows.Forms.Label();
@@ -42,13 +43,12 @@
             this.lb_ClientOnline = new System.Windows.Forms.ListBox();
             this.txtChat = new System.Windows.Forms.TextBox();
             this.lbOnl = new System.Windows.Forms.Label();
-            this.lv_ChatClient1 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lv_ChatClient1);
+            this.panel1.Controls.Add(this.lv_ChatClient);
             this.panel1.Controls.Add(this.bunifuosSwitch);
             this.panel1.Controls.Add(this.lbListRoom);
             this.panel1.Controls.Add(this.lbCreate);
@@ -66,6 +66,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1137, 443);
             this.panel1.TabIndex = 0;
+            // 
+            // lv_ChatClient
+            // 
+            this.lv_ChatClient.FormattingEnabled = true;
+            this.lv_ChatClient.ItemHeight = 16;
+            this.lv_ChatClient.Location = new System.Drawing.Point(255, 16);
+            this.lv_ChatClient.Name = "lv_ChatClient";
+            this.lv_ChatClient.Size = new System.Drawing.Size(600, 340);
+            this.lv_ChatClient.TabIndex = 53;
             // 
             // bunifuosSwitch
             // 
@@ -86,22 +95,22 @@
             // lbListRoom
             // 
             this.lbListRoom.AutoSize = true;
-            this.lbListRoom.Font = new System.Drawing.Font("Robika", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbListRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbListRoom.Location = new System.Drawing.Point(912, 107);
             this.lbListRoom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbListRoom.Name = "lbListRoom";
-            this.lbListRoom.Size = new System.Drawing.Size(126, 28);
+            this.lbListRoom.Size = new System.Drawing.Size(121, 29);
             this.lbListRoom.TabIndex = 51;
             this.lbListRoom.Text = "List Room";
             // 
             // lbCreate
             // 
             this.lbCreate.AutoSize = true;
-            this.lbCreate.Font = new System.Drawing.Font("Robika", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCreate.Location = new System.Drawing.Point(912, 65);
             this.lbCreate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCreate.Name = "lbCreate";
-            this.lbCreate.Size = new System.Drawing.Size(194, 28);
+            this.lbCreate.Size = new System.Drawing.Size(203, 29);
             this.lbCreate.TabIndex = 50;
             this.lbCreate.Text = "CREATE GROUP";
             this.lbCreate.Click += new System.EventHandler(this.lbCreate_Click_1);
@@ -109,11 +118,11 @@
             // lbDarkmode
             // 
             this.lbDarkmode.AutoSize = true;
-            this.lbDarkmode.Font = new System.Drawing.Font("Robika", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDarkmode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDarkmode.Location = new System.Drawing.Point(911, 16);
             this.lbDarkmode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDarkmode.Name = "lbDarkmode";
-            this.lbDarkmode.Size = new System.Drawing.Size(148, 32);
+            this.lbDarkmode.Size = new System.Drawing.Size(139, 31);
             this.lbDarkmode.TabIndex = 49;
             this.lbDarkmode.Text = "Darkmode";
             // 
@@ -208,21 +217,12 @@
             // lbOnl
             // 
             this.lbOnl.AutoSize = true;
-            this.lbOnl.Font = new System.Drawing.Font("Robika", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOnl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOnl.Location = new System.Drawing.Point(19, 17);
             this.lbOnl.Name = "lbOnl";
-            this.lbOnl.Size = new System.Drawing.Size(135, 32);
+            this.lbOnl.Size = new System.Drawing.Size(132, 31);
             this.lbOnl.TabIndex = 41;
             this.lbOnl.Text = "MEMBER";
-            // 
-            // lv_ChatClient1
-            // 
-            this.lv_ChatClient1.FormattingEnabled = true;
-            this.lv_ChatClient1.ItemHeight = 16;
-            this.lv_ChatClient1.Location = new System.Drawing.Point(255, 16);
-            this.lv_ChatClient1.Name = "lv_ChatClient1";
-            this.lv_ChatClient1.Size = new System.Drawing.Size(600, 340);
-            this.lv_ChatClient1.TabIndex = 53;
             // 
             // MainClient
             // 
@@ -256,6 +256,6 @@
         private System.Windows.Forms.ListBox lb_ClientOnline;
         private System.Windows.Forms.Label lbOnl;
         private System.Windows.Forms.TextBox txtChat;
-        private System.Windows.Forms.ListBox lv_ChatClient1;
+        private System.Windows.Forms.ListBox lv_ChatClient;
     }
 }

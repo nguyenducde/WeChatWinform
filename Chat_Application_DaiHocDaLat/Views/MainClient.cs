@@ -134,7 +134,7 @@ namespace Chat_Application_DaiHocDaLat.Views
                     clientSocket.Close();
                 }
             }
-            lv_ChatClient1.Items.Add("Kết nối server thành công");
+            lv_ChatClient.Items.Add("Kết nối server thành công");
 
             //Lắng nghe khi server gửi tin
             Thread listen = new Thread(ReceiveResponse);
@@ -191,14 +191,14 @@ namespace Chat_Application_DaiHocDaLat.Views
                             }
                         }
                     }
-                    if (message.Contains("ServerClosed"))
+                    else if (message.Contains("ServerClosed"))
                     {
                         this.Close();
                     }
                     //Chat Server
                     else
                     {
-                        lv_ChatClient1.Items.Add(message);
+                        lv_ChatClient.Items.Add(message);
                     }
                 }
                 catch (Exception)
@@ -274,11 +274,11 @@ namespace Chat_Application_DaiHocDaLat.Views
             if (bunifuosSwitch.Value == true)
             {
                 this.BackColor = Color.FromArgb(34, 36, 49);
-                lv_ChatClient1.BackColor = Color.FromArgb(34, 36, 49);
+                lv_ChatClient.BackColor = Color.FromArgb(34, 36, 49);
                 lb_ClientOnline.BackColor = Color.FromArgb(34, 36, 49);
                 lb_List_Room.BackColor = Color.FromArgb(34, 36, 49);
                 txtChat.BackColor = Color.FromArgb(34, 36, 49);
-                lv_ChatClient1.ForeColor = Color.White;
+                lv_ChatClient.ForeColor = Color.White;
                 lb_ClientOnline.ForeColor = Color.White;
                 lb_List_Room.ForeColor = Color.White;
                 txtChat.ForeColor = Color.White;
@@ -290,11 +290,11 @@ namespace Chat_Application_DaiHocDaLat.Views
             else
             {
                 this.BackColor = Color.White;
-                lv_ChatClient1.BackColor = Color.White;
+                lv_ChatClient.BackColor = Color.White;
                 lb_ClientOnline.BackColor = Color.White;
                 lb_List_Room.BackColor = Color.White;
                 txtChat.BackColor = Color.White;
-                lv_ChatClient1.ForeColor = Color.Black;
+                lv_ChatClient.ForeColor = Color.Black;
                 lb_ClientOnline.ForeColor = Color.Black;
                 lb_List_Room.ForeColor = Color.Black;
                 txtChat.ForeColor = Color.Black;

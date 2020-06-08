@@ -67,6 +67,7 @@
             // 
             // btnSend
             // 
+            this.btnSend.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSend.Location = new System.Drawing.Point(528, 360);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(166, 61);
@@ -102,6 +103,7 @@
             // 
             // MainServer
             // 
+            this.AcceptButton = this.btnSend;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 433);
@@ -115,6 +117,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainServer";
             this.Text = "Server";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainServer_FormClosed);
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

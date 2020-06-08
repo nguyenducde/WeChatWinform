@@ -22,7 +22,7 @@ namespace Chat_Application_DaiHocDaLat.Views
     {
         private static readonly Socket clientSocket = new Socket
            (AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        private const int PORT = 100;
+    
         frm_ChatUser user;
         ChatRoom nameroom;
         List<frm_ChatUser> lvFromChat = new List<frm_ChatUser>();
@@ -94,9 +94,7 @@ namespace Chat_Application_DaiHocDaLat.Views
         {
             MemoryStream stream = new MemoryStream();
             BinaryFormatter formatter = new BinaryFormatter();
-
             formatter.Serialize(stream, data);
-
             return stream.ToArray();
         }
         object GomManh(byte[] data)
@@ -117,24 +115,17 @@ namespace Chat_Application_DaiHocDaLat.Views
         //Tắt chương trình
         private void MainClient_FormClosed(object sender, FormClosedEventArgs e)
         {
-           
-            
             disConnect();
         }
 
 
         public void ConnectToServer()
         {
-            int attempts = 0;
-
             while (!ClientSocket.Connected)
             {
                 try
                 {
-                    attempts++;
-                    Console.WriteLine("Connection attempt " + attempts);
-                    // Change IPAddress.Loopback to a remote IP to connect to a remote host.
-                    ClientSocket.Connect(IPAddress.Loopback, PORT);
+                    ClientSocket.Connect(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999));
                     ClientSocket.Send(PhanManh(Text + ": Đã kêt nối@@"));
                 }
                 catch (SocketException)
@@ -163,7 +154,6 @@ namespace Chat_Application_DaiHocDaLat.Views
                     //Hiện danh sách client online
                     if (message.Contains("@@"))
                     {
-
                         int check = lb_ClientOnline.FindString(message.Remove(0, 2).Substring(0, 5));
                         if (check == -1)
                         {
@@ -175,7 +165,6 @@ namespace Chat_Application_DaiHocDaLat.Views
                     {
                         for (int i = 0; i < lvFromChat.Count; i++)
                         {
-
                             //Nếu form client có chức user == người tôi nhắn tin 
                             if (lvFromChat[i].Text.Remove(0, 32) == message.Substring(0, 5))
                             {
@@ -190,8 +179,6 @@ namespace Chat_Application_DaiHocDaLat.Views
                         {
                             lvFromChat[i].GetMyChatMess("Tôi: " + message.Remove(0, 13));
                         }
-
-
                     }
                     //Chat room
                     else if (message.Contains("CchatRooomm"))
@@ -202,8 +189,11 @@ namespace Chat_Application_DaiHocDaLat.Views
                             {
                                 lv_ChatRoom[i].getMessChatRoom(message);
                             }
-
                         }
+                    }
+                    if (message.Contains("ServerClosed"))
+                    {
+                        this.Close();
                     }
                     //Chat Server
                     else

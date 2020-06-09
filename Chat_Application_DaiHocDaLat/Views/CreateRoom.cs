@@ -33,10 +33,26 @@ namespace Chat_Application_DaiHocDaLat.Views
         private void btnTaoNhom_Click(object sender, EventArgs e)
         {
             String nameRoom = txt_Name_Room.Text;
-            BLL.BllClient.Instance.Client.insertRoom(nameRoom);
-            txt_Name_Room.Text = "";
-            MessageBox.Show("Tạo nhóm " + nameRoom + " thành công");
-            this.Close();
+            if (nameRoom.Length == 7)
+            {
+                if(BLL.BllClient.Instance.Client.FindNameRoom(txt_Name_Room.Text))
+                {
+                    MessageBox.Show("Tên nhóm này đã tồn tại, vui lòng tạo nhóm mới");
+                }
+                else
+                {
+                    BLL.BllClient.Instance.Client.insertRoom(nameRoom);
+                    txt_Name_Room.Text = "";
+                    MessageBox.Show("Tạo nhóm " + nameRoom + " thành công");
+                    this.Close();
+                }
+              
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng tạo nhóm có 7 kí tự ");
+            }
+               
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)

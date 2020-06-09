@@ -35,7 +35,11 @@ namespace Chat_Application_DaiHocDaLat.Views
         {
             String nameClientChat = mess.Remove(0, 11).Substring(0, 5);
             String message = mess.Remove(0, 75);
-            lv_ChatRoom.Items.Add(nameClientChat+ ":"+message);
+            if(mess.Remove(0, 27).Substring(0, 7)== Text.Remove(0, 16).Substring(0, 7))
+            {
+                lv_ChatRoom.Items.Add(nameClientChat + ":" + message);
+            }
+           
         }
         //Phân mảnh và gom mảnh data để gửi và nhận thông tin
         byte[] PhanManh(object data)

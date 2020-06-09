@@ -78,6 +78,12 @@ namespace Chat_Application_DaiHocDaLat.DAL
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result.Rows.Count > 0;
         }
+        public bool FindNameRoom(String nameRoom)
+        {
+            String query = String.Format("select * from Room where NameRoom=N'{0}'", nameRoom);
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result.Rows.Count > 0;
+        }
     }
     }
 

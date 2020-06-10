@@ -34,5 +34,40 @@ namespace Chat_Application_DaiHocDaLat.Views
             frmLogin.Show();
             this.Hide();
         }
+
+        private void mtrButtonPass_Click(object sender, EventArgs e)
+        {
+            string name = txt_name.Text;
+            string pass = txt_pass.Text;
+            string passConfirm = txt_pass_confirm.Text;
+            if(pass!=passConfirm)
+            {
+                MessageBox.Show("Mật khẩu không trùng nhau");
+            }
+            else if (name.Length==6)
+            {
+                if(BLL.BllClient.Instance.Client.checkUser(name))
+                {
+                    MessageBox.Show("Tên này khoản này đã tồn tại");
+                }
+                else
+                {
+                    BLL.BllClient.Instance.Client.insertUser(name, pass);
+                    MessageBox.Show("Tạo tài khoản thành công");
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng tạo tên tài khoản 6 kí tự");
+            }
+
+        }
+
+        private void mtrSingleTextUS_Click(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }

@@ -36,7 +36,17 @@ namespace Chat_Application_DaiHocDaLat.DAL
           DataTable result=  DataProvider.Instance.ExecuteQuery(query);
             return result.Rows.Count > 0;
         }
-
+        public void insertUser(String name,string pass)
+        {
+            string query = String.Format("insert into Account values (N'{0}',N'{1}',0,0)",name,pass);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public bool checkUser(String name)
+        {
+            String query = String.Format("select * from Account where name=N'{0}'", name);
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result.Rows.Count > 0;
+        }
         public void setStatusOnline(String name)
         {
             string query = "Update Account set status=1 where name=N'" + name + "'";

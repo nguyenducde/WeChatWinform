@@ -44,7 +44,7 @@ namespace Chat_Application_DaiHocDaLat.Views
             {
                 MessageBox.Show("Mật khẩu không trùng nhau");
             }
-            else if (name.Length==6)
+            else if (name.Length==5)
             {
                 if(BLL.BllClient.Instance.Client.checkUser(name))
                 {

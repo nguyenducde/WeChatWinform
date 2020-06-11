@@ -50,6 +50,7 @@ namespace Chat_Application_DaiHocDaLat.Views
             Text = user;
             ConnectToServer();
             DisplayNameRoom();
+            DisplayMemberOffline();
         }
 
      
@@ -142,6 +143,8 @@ namespace Chat_Application_DaiHocDaLat.Views
             listen.Start();
         }
 
+
+        //Nhận tin nhắn
         public void ReceiveResponse()
         {
             while (true)
@@ -154,11 +157,23 @@ namespace Chat_Application_DaiHocDaLat.Views
                     //Hiện danh sách client online
                     if (message.Contains("@@"))
                     {
+                       
                         int check = lb_ClientOnline.FindString(message.Remove(0, 2).Substring(0, 5));
+                     
                         if (check == -1)
                         {
-                            lb_ClientOnline.Items.Add(message.Remove(0, 2).Substring(0, 5));
+                            lb_ClientOnline.Items.Add(message.Remove(0, 2).Substring(0, 5)+" đang online");
+                          
                         }
+                        else
+                        {
+                            lb_ClientOnline.Items.Remove(message.Remove(0, 2).Substring(0, 5));
+                            if (lb_ClientOnline.FindString(message.Remove(0, 2).Substring(0, 5) + " đang online") == -1)
+                            {
+                                lb_ClientOnline.Items.Add(message.Remove(0, 2).Substring(0, 5) + " đang online");
+                            }
+                        }
+                       
                     }
                     //Chat client to client
                     else if (message.Contains("ChatClient"))
@@ -208,6 +223,30 @@ namespace Chat_Application_DaiHocDaLat.Views
                 }
                 
             }
+        }
+
+        public void DisplayMemberOffline()
+        {
+
+            Task.Run(async () => {
+                for (;;)
+                {
+
+                    await Task.Delay(5000);
+                    DataTable Data = BllClient.Instance.Client.DisplayClientOffline();
+                    foreach (DataRow dtRow in Data.Rows)
+                    {
+                        String name = dtRow.ItemArray[0].ToString();
+                        int check = lb_ClientOnline.FindString(name);
+                        if (check == -1)
+                        {
+                            lb_ClientOnline.Items.Add(name);
+                        }
+
+
+                    }
+                }
+            });
         }
         ///////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////End Phần chung/////////////////////////////////////////

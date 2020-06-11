@@ -72,7 +72,8 @@ namespace Chat_Application_DaiHocDaLat.Views
         //Hiển thị thông tin người dùng
         public void DisplayUser(String myUser, String FriendUser, string mess)
         {
-            Text = "Người dùng : " + myUser + " nhắn tin với " + FriendUser;
+            Text = "Người dùng : " + myUser + " nhắn tin với " + FriendUser.Substring(0, 5);
+           
         }
         //Lấy tin nhắn lúc mình gửi
         public void GetMyChatMess(String mess)

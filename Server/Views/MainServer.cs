@@ -20,6 +20,7 @@ namespace Server.Views
     {
         private static readonly Socket serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         private static readonly List<Socket> clientSockets = new List<Socket>();
+        
         public MainServer()
         {
             InitializeComponent();

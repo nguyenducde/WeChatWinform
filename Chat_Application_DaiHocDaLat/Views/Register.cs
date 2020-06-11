@@ -54,7 +54,7 @@ namespace Chat_Application_DaiHocDaLat.Views
                 {
                     BLL.BllClient.Instance.Client.insertUser(name, pass);
                     MessageBox.Show("Tạo tài khoản thành công");
-                    this.Close();
+                   
                 }
             }
             else

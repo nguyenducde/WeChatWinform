@@ -99,9 +99,9 @@
             this.lbListRoom.Location = new System.Drawing.Point(912, 107);
             this.lbListRoom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbListRoom.Name = "lbListRoom";
-            this.lbListRoom.Size = new System.Drawing.Size(121, 29);
+            this.lbListRoom.Size = new System.Drawing.Size(191, 29);
             this.lbListRoom.TabIndex = 51;
-            this.lbListRoom.Text = "List Room";
+            this.lbListRoom.Text = "Danh sách nhóm";
             // 
             // lbCreate
             // 
@@ -110,9 +110,9 @@
             this.lbCreate.Location = new System.Drawing.Point(912, 65);
             this.lbCreate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCreate.Name = "lbCreate";
-            this.lbCreate.Size = new System.Drawing.Size(203, 29);
+            this.lbCreate.Size = new System.Drawing.Size(122, 29);
             this.lbCreate.TabIndex = 50;
-            this.lbCreate.Text = "CREATE GROUP";
+            this.lbCreate.Text = "Tạo nhóm";
             this.lbCreate.Click += new System.EventHandler(this.lbCreate_Click_1);
             // 
             // lbDarkmode
@@ -165,12 +165,13 @@
             // 
             // lb_List_Room
             // 
+            this.lb_List_Room.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_List_Room.FormattingEnabled = true;
-            this.lb_List_Room.ItemHeight = 16;
+            this.lb_List_Room.ItemHeight = 18;
             this.lb_List_Room.Location = new System.Drawing.Point(917, 149);
             this.lb_List_Room.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_List_Room.Name = "lb_List_Room";
-            this.lb_List_Room.Size = new System.Drawing.Size(200, 276);
+            this.lb_List_Room.Size = new System.Drawing.Size(200, 274);
             this.lb_List_Room.TabIndex = 45;
             this.lb_List_Room.SelectedIndexChanged += new System.EventHandler(this.lb_List_Room_SelectedIndexChanged);
             // 
@@ -187,18 +188,19 @@
             this.btnSend.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnSend.Size = new System.Drawing.Size(143, 38);
             this.btnSend.TabIndex = 44;
-            this.btnSend.Text = "Send";
+            this.btnSend.Text = "Gửi";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // lb_ClientOnline
             // 
+            this.lb_ClientOnline.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ClientOnline.FormattingEnabled = true;
-            this.lb_ClientOnline.ItemHeight = 16;
-            this.lb_ClientOnline.Location = new System.Drawing.Point(21, 50);
+            this.lb_ClientOnline.ItemHeight = 18;
+            this.lb_ClientOnline.Location = new System.Drawing.Point(25, 50);
             this.lb_ClientOnline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_ClientOnline.Name = "lb_ClientOnline";
-            this.lb_ClientOnline.Size = new System.Drawing.Size(172, 372);
+            this.lb_ClientOnline.Size = new System.Drawing.Size(172, 364);
             this.lb_ClientOnline.TabIndex = 43;
             this.lb_ClientOnline.SelectedIndexChanged += new System.EventHandler(this.lb_ClientOnline_SelectedIndexChanged);
             // 
@@ -220,9 +222,9 @@
             this.lbOnl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOnl.Location = new System.Drawing.Point(19, 17);
             this.lbOnl.Name = "lbOnl";
-            this.lbOnl.Size = new System.Drawing.Size(132, 31);
+            this.lbOnl.Size = new System.Drawing.Size(148, 31);
             this.lbOnl.TabIndex = 41;
-            this.lbOnl.Text = "MEMBER";
+            this.lbOnl.Text = "Thành viên";
             // 
             // MainClient
             // 

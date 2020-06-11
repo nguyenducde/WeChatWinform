@@ -57,10 +57,10 @@ namespace Chat_Application_DaiHocDaLat.DAL
             string query = "Update Account set status=0 where name=N'" + name + "'";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-        public DataTable DisplayClientOnline()
+        public DataTable DisplayClientOffline()
         {
             DataTable data = new DataTable();
-            string query = "select name from Account where role=0 and status=1";
+            string query = "select name from Account where role=0";
             data =DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -82,6 +82,13 @@ namespace Chat_Application_DaiHocDaLat.DAL
             data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+        public DataTable DisPlayMemberRoom()
+        {
+            DataTable data = new DataTable();
+            string query = "select name from Room";
+            data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
         public bool checkClientNameRoom(String nameRoom,String nameClient)
         {
             String query =String.Format("select * from Room where NameRoom=N'{0}' and name=N'{1}'",nameRoom,nameClient);
@@ -94,6 +101,8 @@ namespace Chat_Application_DaiHocDaLat.DAL
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result.Rows.Count > 0;
         }
+       
+
     }
     }
 

@@ -23,12 +23,34 @@ namespace Chat_Application_DaiHocDaLat.Views
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new ColorScheme(Primary.Cyan300, Primary.Cyan500, Primary.DeepOrange800, Accent.Cyan700, TextShade.BLACK);
+            DisplayMemberRoom();
         }
         public void DisplayUserChatRoom(String name,String nameRoom)
         {
             Text = name + " chat nhóm " + nameRoom;
         }
+        public void DisplayMemberRoom()
+        {
+            Task.Run(async () => {
+                for (;;)
+                {
+                    await Task.Delay(5000);
+                    lb_ThanhVienNhom.Items.Clear();
+                    DataTable Data = BLL.BllClient.Instance.Client.DisPlayMemberRoom();
+                    foreach (DataRow dtRow in Data.Rows)
+                    {
+                        String nameroom = dtRow.ItemArray[0].ToString();
+                        int result = lb_ThanhVienNhom.FindString(nameroom);
+                        if (result == -1)
+                        {
+                            lb_ThanhVienNhom.Items.Add(dtRow.ItemArray[0]);
+                        }
 
+
+                    }
+                }
+            });
+        }
        
 
         public void getMessChatRoom(String mess)

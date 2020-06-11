@@ -23,5 +23,11 @@ namespace Server.DAL
             data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+        //Chat offline
+        public void insertMessage(String myName, String RecipientName, string mess)
+        {
+            String query = String.Format("insert into Message Values(N'{0}',N'{1}',N'{2}')", myName, RecipientName, mess);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

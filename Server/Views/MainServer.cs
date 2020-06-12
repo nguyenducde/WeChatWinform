@@ -31,40 +31,6 @@ namespace Server.Views
 
         }
 
-       
-        private void Main_Load(object sender, EventArgs e)
-        {
-
-        }
-       
-        //Gửi tin nhắn all
-        private void btnSend_Click(object sender, EventArgs e)
-        {
-            
-            for(int i=0;i<clientSockets.Count;i++)
-            {
-                clientSockets[i].Send(PhanManh("Server: "+txtChat.Text));
-               
-            }
-            lvChatServer.Items.Add("Server: " + txtChat.Text);
-            txtChat.Text = "";
-        }
-
-
-      //Ngắt kết nối
-        private static void CloseAllSockets()
-        {
-            foreach (Socket socket in clientSockets)
-            {
-                socket.Shutdown(SocketShutdown.Both);
-                socket.Close();
-            }
-
-            serverSocket.Close();
-        }
-
-
-      
         void Connect()
         {
           
@@ -109,7 +75,7 @@ namespace Server.Views
                     //Client ngắt kết nối
                     else if (text.Contains("$$"))
                     {
-                        lb_ClientOnline.Items.Remove(text.Substring(0, 5) + current.RemoteEndPoint);
+                       // lb_ClientOnline.Items.Remove((text.Substring(0, 5) + current.RemoteEndPoint).ToString());
                         lvChatServer.Items.Add(text);
                         current.Close();
                     }
@@ -124,9 +90,9 @@ namespace Server.Views
 
                             for (int ip = 0; ip < lb_ClientOnline.Items.Count; ip++)
                             {
-                                if (lb_ClientOnline.Items[ip].ToString().Contains(text.Remove(0, 26).Substring(0, 5)))
+                                if (lb_ClientOnline.Items[ip].Text.Contains(text.Remove(0, 26).Substring(0, 5)))
                                 {
-                                    if (clientSockets[i].RemoteEndPoint.ToString() == lb_ClientOnline.Items[ip].ToString().Remove(0, 5))
+                                    if (clientSockets[i].RemoteEndPoint.ToString() == lb_ClientOnline.Items[ip].Text.Remove(0, 5))
                                     {
                                         clientSockets[i].Send(PhanManh(text));
                                     }
@@ -152,7 +118,7 @@ namespace Server.Views
                                 foreach (DataRow dtRow in Data.Rows)
                                 {
                                     String nameClient = dtRow.ItemArray[1].ToString().Remove(5, 45);
-                                    if (lb_ClientOnline.Items[ip].ToString().Contains(nameClient) && trunggian == 0)
+                                    if (lb_ClientOnline.Items[ip].Text.Contains(nameClient) && trunggian == 0)
                                     {
                                         trunggian++;
                                         clientSockets[i].Send(PhanManh(text));
@@ -165,8 +131,8 @@ namespace Server.Views
                     else
                     {
                         lvChatServer.Items.Add(text);
-                        //  current.Send(PhanManh("Tôi là " + text));
-                        chatAll(text);
+                         current.Send(PhanManh("Tôi là " + text));
+                        //chatAll(text);
                     }
                    
 
@@ -178,7 +144,61 @@ namespace Server.Views
                 current.Close();
             }
         }
-       
+
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            if (lb_ClientOnline.SelectedItems.Count > 0)
+            {
+                SendMessageFromServerToClient();
+            }
+            else
+            {
+                SendMessageFromServerToAllClient();
+            }
+
+            lvChatServer.Items.Add("Server: " + txtChat.Text);
+            txtChat.Text = "";
+        }
+        private void SendMessageFromServerToClient()
+        {
+            int index = 0;
+            for (int i = 0; i <= lb_ClientOnline.Items.Count - 1; i++)
+            {
+                if (lb_ClientOnline.Items[i].Selected == true)
+                {
+                    index = i;
+                    break;
+                }
+            }
+            clientSockets[index].Send(PhanManh("Server: " + txtChat.Text));
+
+        }
+        private void SendMessageFromServerToAllClient()
+        {
+            for (int i = 0; i < clientSockets.Count; i++)
+            {
+                clientSockets[i].Send(PhanManh("Server: " + txtChat.Text));
+
+            }
+        }
+
+
+        //Ngắt kết nối
+        private static void CloseAllSockets()
+        {
+            foreach (Socket socket in clientSockets)
+            {
+                socket.Shutdown(SocketShutdown.Both);
+                socket.Close();
+            }
+
+            serverSocket.Close();
+        }
+
+
+
+
         //Phân mảnh và gom mảnh data để gửi và nhận thông tin
         byte[] PhanManh(object data)
         {
@@ -219,7 +239,7 @@ namespace Server.Views
             {
                 for (int i = 0; i < lb_ClientOnline.Items.Count; i++)
                 {
-                    clientSockets[client].Send(PhanManh("@@" + lb_ClientOnline.Items[i].ToString()));
+                    clientSockets[client].Send(PhanManh("@@" + lb_ClientOnline.Items[i].Text));
                 }
             }
 

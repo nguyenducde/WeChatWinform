@@ -58,7 +58,7 @@ namespace Chat_Application_DaiHocDaLat.Views
         //Khi chọn người online thì hiện lên form chat riêng
         private void lb_ClientOnline_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try {
+            try  {
                 String mess = "";
                 user = new frm_ChatUser();
                 lvFromChat.Add(user);

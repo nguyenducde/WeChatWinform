@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.txtChat = new System.Windows.Forms.TextBox();
-            this.lb_ClientOnline = new System.Windows.Forms.ListBox();
             this.lbOnl = new System.Windows.Forms.Label();
             this.btnSend = new System.Windows.Forms.Button();
             this.lbTotalClient = new System.Windows.Forms.Label();
             this.lb_Total_Client = new System.Windows.Forms.Label();
             this.lvChatServer = new System.Windows.Forms.ListBox();
+            this.lb_ClientOnline = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // txtChat
@@ -45,16 +45,6 @@
             this.txtChat.Name = "txtChat";
             this.txtChat.Size = new System.Drawing.Size(504, 61);
             this.txtChat.TabIndex = 17;
-            // 
-            // lb_ClientOnline
-            // 
-            this.lb_ClientOnline.FormattingEnabled = true;
-            this.lb_ClientOnline.ItemHeight = 16;
-            this.lb_ClientOnline.Location = new System.Drawing.Point(527, 140);
-            this.lb_ClientOnline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lb_ClientOnline.Name = "lb_ClientOnline";
-            this.lb_ClientOnline.Size = new System.Drawing.Size(167, 196);
-            this.lb_ClientOnline.TabIndex = 18;
             // 
             // lbOnl
             // 
@@ -101,24 +91,33 @@
             this.lvChatServer.Size = new System.Drawing.Size(504, 340);
             this.lvChatServer.TabIndex = 22;
             // 
+            // lb_ClientOnline
+            // 
+            this.lb_ClientOnline.Location = new System.Drawing.Point(528, 127);
+            this.lb_ClientOnline.Name = "lb_ClientOnline";
+            this.lb_ClientOnline.Size = new System.Drawing.Size(174, 225);
+            this.lb_ClientOnline.TabIndex = 23;
+            this.lb_ClientOnline.UseCompatibleStateImageBehavior = false;
+            this.lb_ClientOnline.View = System.Windows.Forms.View.List;
+            // 
             // MainServer
             // 
             this.AcceptButton = this.btnSend;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 433);
+            this.Controls.Add(this.lb_ClientOnline);
             this.Controls.Add(this.lvChatServer);
             this.Controls.Add(this.lb_Total_Client);
             this.Controls.Add(this.lbTotalClient);
             this.Controls.Add(this.txtChat);
-            this.Controls.Add(this.lb_ClientOnline);
             this.Controls.Add(this.lbOnl);
             this.Controls.Add(this.btnSend);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainServer";
             this.Text = "Server";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainServer_FormClosed);
-            this.Load += new System.EventHandler(this.Main_Load);
+        
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,11 +126,11 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtChat;
-        private System.Windows.Forms.ListBox lb_ClientOnline;
         private System.Windows.Forms.Label lbOnl;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Label lbTotalClient;
         private System.Windows.Forms.Label lb_Total_Client;
         private System.Windows.Forms.ListBox lvChatServer;
+        private System.Windows.Forms.ListView lb_ClientOnline;
     }
 }

@@ -117,6 +117,7 @@
             this.btnThemBanBe.TabIndex = 4;
             this.btnThemBanBe.Text = "Thêm bạn bè";
             this.btnThemBanBe.UseVisualStyleBackColor = true;
+            this.btnThemBanBe.Click += new System.EventHandler(this.btnThemBanBe_Click);
             // 
             // ChatRoom
             // 

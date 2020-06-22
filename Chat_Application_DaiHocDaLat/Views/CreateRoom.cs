@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using Chat_Application_DaiHocDaLat.BLL;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -38,7 +39,7 @@ namespace Chat_Application_DaiHocDaLat.Views
             if (nameRoom.Length == 7)
             {
                
-                    BLL.BllClient.Instance.Client.insertRoom(nameRoom);
+                    BllClient.Instance.Client.insertRoom(nameRoom);
                     MainClient.ClientSocket.Send(PhanManh("TtaoPhong"+nameRoom));
                     txt_Name_Room.Text = "";
                     MessageBox.Show("Tạo nhóm " + nameRoom + " thành công");

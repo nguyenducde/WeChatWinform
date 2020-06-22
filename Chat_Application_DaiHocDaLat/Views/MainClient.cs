@@ -200,6 +200,11 @@ namespace Chat_Application_DaiHocDaLat.Views
                             }
                         }
                     }
+                    //Thêm bạn bè vào room
+                    else if(message.Contains("BzboxThongbao"))
+                    {
+                        MessageBox.Show("Một người bạn của bản đã thêm bạn vào nhóm "+message.Substring(0,7));
+                    }
                     else if (message.Contains("ServerClosed"))
                     {
                         this.Close();
@@ -280,14 +285,14 @@ namespace Chat_Application_DaiHocDaLat.Views
                 nameroom = new ChatRoom();
                 lv_ChatRoom.Add(nameroom);
                 nameroom.DisplayUserChatRoom(Text, nameRoom);
-                if (BllClient.Instance.Client.checkClientNameRoom(nameRoom, Text))
-                {
-                }
-                else
-                {
-                    BllClient.Instance.Client.insertClientRoom(nameRoom, Text);
+                //if (BllClient.Instance.Client.checkClientNameRoom(nameRoom, Text))
+                //{
+                //}
+                //else
+                //{
+                //    BllClient.Instance.Client.insertClientRoom(nameRoom, Text);
 
-                }
+                //}
                 nameroom.Show();
             }catch
             {

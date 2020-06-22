@@ -94,5 +94,14 @@ namespace Chat_Application_DaiHocDaLat.Views
         {
 
         }
+
+        private void btnThemBanBe_Click(object sender, EventArgs e)
+        {
+            if(txtTimKiem.Text!="")
+            {
+                MainClient.ClientSocket.Send(PhanManh("*t*" +Text+ txtTimKiem.Text));
+            }
+        }
+        
     }
 }

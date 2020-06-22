@@ -112,6 +112,35 @@ namespace Server.Views
                         String nameRoom = text.Remove(0, 9);
                         BllServer.Instance.Server.insertRoom(nameRoom);
                     }
+                    //Thêm bạn bè trong room
+                    else if(text.Contains("*t*"))
+                    {
+                        string nameRoom = text.Remove(0, 19).Substring(0, 7);
+                        string nameClient = text.Remove(0, 3).Substring(0, 5);
+                        if (BllServer.Instance.Server.checkClientNameRoom(nameRoom,nameClient ))
+                        {
+                            for (int i = 0; i < lb_ClientOnline.Items.Count; i++)
+                            {
+                                if (lb_ClientOnline.Items[i].Text.Contains(nameClient))
+                                {
+                                    clientSockets[i].Send(PhanManh(nameRoom+"BzboxThongbao"));
+                                }
+                            }
+                        }
+                        else
+                        {
+                            BllServer.Instance.Server.insertClientRoom(nameRoom, nameClient);
+                            for(int i=0;i<lb_ClientOnline.Items.Count;i++)
+                            {
+                                if(lb_ClientOnline.Items[i].Text.Contains(nameClient))
+                                {
+                                    clientSockets[i].Send(PhanManh("BzboxThongbao"));
+                                }
+                            }
+
+                        }
+
+                    }
                     //Chat room
                     else if (text.Contains("CchatRooomm"))
                     {

@@ -25,7 +25,7 @@ namespace Chat_Application_DaiHocDaLat.Views
     
         frm_ChatUser user;
         ChatRoom nameroom;
-        List<frm_ChatUser> lvFromChat = new List<frm_ChatUser>();
+        List<frm_ChatUser> lv_ChatUser = new List<frm_ChatUser>();
         List<ChatRoom> lv_ChatRoom = new List<ChatRoom>();
 
       
@@ -61,7 +61,7 @@ namespace Chat_Application_DaiHocDaLat.Views
             try  {
                 String mess = "";
                 user = new frm_ChatUser();
-                lvFromChat.Add(user);
+                lv_ChatUser.Add(user);
                 user.DisplayUser(Text, lb_ClientOnline.Items[lb_ClientOnline.SelectedIndex].ToString(), mess);
                 user.Show();
             }
@@ -178,23 +178,16 @@ namespace Chat_Application_DaiHocDaLat.Views
                     //Chat client to client
                     else if (message.Contains("ChatClient"))
                     {
-                        for (int i = 0; i < lvFromChat.Count; i++)
+                        for (int i = 0; i < lv_ChatUser.Count; i++)
                         {
+                            if(lv_ChatUser[i].Text!="")
+                            {
+                                lv_ChatUser[i].getChatUser(message);
+                            }
+                            
+                        }
+                    }
 
-                            //if(message.Remove(0, 26).Substring(0, 5)== lvFromChat[i].Text.Remove(0, 13).Substring(0,5))
-                            // {
-                            //     lvFromChat[i].getChatUser(message);
-                            // }
-                            lvFromChat[i].getChatUser(message);
-                        }
-                    }
-                    else if (message.Contains("MyCchatClient"))
-                    {
-                        for (int i = 0; i < lvFromChat.Count; i++)
-                        {
-                            lvFromChat[i].GetMyChatMess("Tôi: " + message.Remove(0, 13));
-                        }
-                    }
                     
                     //Chat room
                     else if (message.Contains("CchatRooomm"))

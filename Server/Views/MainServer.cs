@@ -103,7 +103,7 @@ namespace Server.Views
                             }
 
                         }
-                        current.Send(PhanManh("MyCchatClient" + getMyMessage));
+                       
 
                     }
                     //Tao room

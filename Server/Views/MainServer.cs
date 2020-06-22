@@ -1,15 +1,11 @@
 ﻿using Server.BLL;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -102,6 +98,12 @@ namespace Server.Views
                         }
                         current.Send(PhanManh("MyCchatClient" + getMyMessage));
 
+                    }
+                    //Tao room
+                    else if(text.Contains("TtaoPhong"))
+                    {
+                        String nameRoom = text.Remove(0, 9);
+                        BllServer.Instance.Server.insertRoom(nameRoom);
                     }
                     //Chat room
                     else if (text.Contains("CchatRooomm"))
@@ -227,6 +229,7 @@ namespace Server.Views
                     lbTotalClient.Text = "Tổng số client online là: " +lb_ClientOnline.Items.Count;
                     sendListClientOnline();
                     lb_Total_Client.Text = "Tổng số client là: " + BLL.BllServer.Instance.Server.DisplayTotalClient();
+                    
                 }
             });
 
@@ -244,6 +247,17 @@ namespace Server.Views
             }
 
 
+        }
+        //gửi danh sách phòng phía client
+        void sendListRoom(String name)
+        {
+            for (int client = 0; client < clientSockets.Count; client++)
+            {
+                for (int i = 0; i < lb_ClientOnline.Items.Count; i++)
+                {
+                    clientSockets[client].Send(PhanManh("name?room"+name));
+                }
+            }
         }
         //Chat all
         void chatAll(String mess)

@@ -1,6 +1,5 @@
-﻿using Chat_Application_DaiHocDaLat.DAL;
-using Chat_Application_DaiHocDaLat.Views;
-using MusicLoginScreen;
+﻿
+using Chat_Application_DaiHocDaLat.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +12,7 @@ namespace Chat_Application_DaiHocDaLat.BLL
     {
         private static BllClient instance;
         private Client client;
-        private Login login;
-        private MainClient main;
+        
 
         private BllClient()
         {
@@ -47,35 +45,8 @@ namespace Chat_Application_DaiHocDaLat.BLL
                 client = value;
             }
         }
+        
 
-        public Login Login
-        {
-            get
-            {
-                return login;
-            }
-
-            set
-            {
-                login = value;
-            }
-        }
-
-        public MainClient Main
-        {
-            get
-            {
-                return main;
-            }
-
-            set
-            {
-                main = value;
-            }
-        }
-
-       
-       
-
+     
     }
 }

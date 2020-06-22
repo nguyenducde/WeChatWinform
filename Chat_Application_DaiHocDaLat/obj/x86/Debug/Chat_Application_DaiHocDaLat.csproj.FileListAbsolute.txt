@@ -317,3 +317,7 @@ C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Chat_Application_DaiHocDaL
 C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Chat_Application_DaiHocDaLat\obj\x86\Debug\Chat_Application_DaiHocDaLat.csproj.GenerateResource.Cache
 C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Chat_Application_DaiHocDaLat\obj\x86\Debug\Chat_Application_DaiHocDaLat.exe
 C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Chat_Application_DaiHocDaLat\obj\x86\Debug\Chat_Application_DaiHocDaLat.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Chat_Application_DaiHocDaLat\bin\x86\Debug\BLL.dll
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Chat_Application_DaiHocDaLat\bin\x86\Debug\DAL.dll
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Chat_Application_DaiHocDaLat\bin\x86\Debug\BLL.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Chat_Application_DaiHocDaLat\bin\x86\Debug\DAL.pdb

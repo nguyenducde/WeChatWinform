@@ -1,0 +1,7 @@
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\BLL\bin\Debug\BLL.dll
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\BLL\bin\Debug\BLL.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\BLL\bin\Debug\DAL.dll
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\BLL\bin\Debug\DAL.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\BLL\obj\Debug\BLL.dll
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\BLL\obj\Debug\BLL.pdb

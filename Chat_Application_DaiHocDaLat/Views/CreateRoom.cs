@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,17 +37,13 @@ namespace Chat_Application_DaiHocDaLat.Views
             String nameRoom = txt_Name_Room.Text;
             if (nameRoom.Length == 7)
             {
-                if(BLL.BllClient.Instance.Client.FindNameRoom(txt_Name_Room.Text))
-                {
-                    MessageBox.Show("Tên nhóm này đã tồn tại, vui lòng tạo nhóm mới");
-                }
-                else
-                {
+               
                     BLL.BllClient.Instance.Client.insertRoom(nameRoom);
+                    MainClient.ClientSocket.Send(PhanManh("TtaoPhong"+nameRoom));
                     txt_Name_Room.Text = "";
                     MessageBox.Show("Tạo nhóm " + nameRoom + " thành công");
                     this.Close();
-                }
+                
               
             }
             else
@@ -58,6 +56,19 @@ namespace Chat_Application_DaiHocDaLat.Views
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+        byte[] PhanManh(object data)
+        {
+            MemoryStream stream = new MemoryStream();
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(stream, data);
+            return stream.ToArray();
+        }
+        object GomManh(byte[] data)
+        {
+            MemoryStream steam = new MemoryStream(data);
+            BinaryFormatter formatter = new BinaryFormatter();
+            return formatter.Deserialize(steam);
         }
     }
 }

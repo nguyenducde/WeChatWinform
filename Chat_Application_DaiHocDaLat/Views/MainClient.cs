@@ -180,12 +180,12 @@ namespace Chat_Application_DaiHocDaLat.Views
                     {
                         for (int i = 0; i < lvFromChat.Count; i++)
                         {
-                            //Nếu form client có chức user == người tôi nhắn tin 
-                            if (lvFromChat[i].Text.Remove(0, 32) == message.Substring(0, 5))
-                            {
-                                lvFromChat[i].getChatUser(message);
-                            }
 
+                            //if(message.Remove(0, 26).Substring(0, 5)== lvFromChat[i].Text.Remove(0, 13).Substring(0,5))
+                            // {
+                            //     lvFromChat[i].getChatUser(message);
+                            // }
+                            lvFromChat[i].getChatUser(message);
                         }
                     }
                     else if (message.Contains("MyCchatClient"))
@@ -195,6 +195,7 @@ namespace Chat_Application_DaiHocDaLat.Views
                             lvFromChat[i].GetMyChatMess("Tôi: " + message.Remove(0, 13));
                         }
                     }
+                    
                     //Chat room
                     else if (message.Contains("CchatRooomm"))
                     {

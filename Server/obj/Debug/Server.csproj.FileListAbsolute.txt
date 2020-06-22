@@ -53,3 +53,7 @@ C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Server\obj\Debug\Server.Vi
 C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Server\obj\Debug\Server.csproj.GenerateResource.Cache
 C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Server\obj\Debug\Server.exe
 C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Server\obj\Debug\Server.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Server\bin\Debug\BLL.dll
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Server\bin\Debug\DAL.dll
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Server\bin\Debug\BLL.pdb
+C:\Users\Nguyen Duc De\Desktop\App Chat\WeChatWinform\Server\bin\Debug\DAL.pdb

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat_Application_DaiHocDaLa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{2B3D88BB-69B1-4CED-B42D-35031C0F9726}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{88CC1E7E-0A03-460C-AEF5-344C36EC7C8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{A35C83D2-F704-4F1A-A853-033E56A2F3C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,22 @@ Global
 		{2B3D88BB-69B1-4CED-B42D-35031C0F9726}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2B3D88BB-69B1-4CED-B42D-35031C0F9726}.Release|x86.ActiveCfg = Release|Any CPU
 		{2B3D88BB-69B1-4CED-B42D-35031C0F9726}.Release|x86.Build.0 = Release|Any CPU
+		{88CC1E7E-0A03-460C-AEF5-344C36EC7C8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CC1E7E-0A03-460C-AEF5-344C36EC7C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CC1E7E-0A03-460C-AEF5-344C36EC7C8E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{88CC1E7E-0A03-460C-AEF5-344C36EC7C8E}.Debug|x86.Build.0 = Debug|Any CPU
+		{88CC1E7E-0A03-460C-AEF5-344C36EC7C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CC1E7E-0A03-460C-AEF5-344C36EC7C8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CC1E7E-0A03-460C-AEF5-344C36EC7C8E}.Release|x86.ActiveCfg = Release|Any CPU
+		{88CC1E7E-0A03-460C-AEF5-344C36EC7C8E}.Release|x86.Build.0 = Release|Any CPU
+		{A35C83D2-F704-4F1A-A853-033E56A2F3C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A35C83D2-F704-4F1A-A853-033E56A2F3C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A35C83D2-F704-4F1A-A853-033E56A2F3C3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A35C83D2-F704-4F1A-A853-033E56A2F3C3}.Debug|x86.Build.0 = Debug|Any CPU
+		{A35C83D2-F704-4F1A-A853-033E56A2F3C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A35C83D2-F704-4F1A-A853-033E56A2F3C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A35C83D2-F704-4F1A-A853-033E56A2F3C3}.Release|x86.ActiveCfg = Release|Any CPU
+		{A35C83D2-F704-4F1A-A853-033E56A2F3C3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

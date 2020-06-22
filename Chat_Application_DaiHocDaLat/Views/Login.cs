@@ -41,7 +41,7 @@ namespace Chat_Application_DaiHocDaLat.Views
             {
                 if (BllClient.Instance.Client.Login(txt_UserName.Text, txt_PassWord.Text))
                 {
-                    BllClient.Instance.Client.setStatusOnline(txt_UserName.Text);
+                   // BllClient.Instance.Client.setStatusOnline(txt_UserName.Text);
                    
                     this.Hide();
                     Loading frmload = new Loading(txt_UserName.Text);

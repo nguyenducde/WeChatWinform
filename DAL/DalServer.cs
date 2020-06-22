@@ -1,44 +1,44 @@
-﻿using Chat_Application_DaiHocDaLat.BLL;
-using DevExpress.XtraEditors;
+﻿using Chat_Application_DaiHocDaLat.DAL;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
-using System.Drawing.Imaging;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace Chat_Application_DaiHocDaLat.DAL
+namespace Server.DAL
 {
-   public class Client
+   public class DalServer
     {
-        private Account account;
-        public Account Account
+        public int DisplayTotalClient()
         {
-            get
-            {
-                return account;
-            }
-
-            set
-            {
-                account = value;
-            }
+            
+            string query = "select * from Account where role=0";
+         DataTable  data = DataProvider.Instance.ExecuteQuery(query);
+            return data.Rows.Count; ;
         }
-        //Chat Client
+        public DataTable FindNameRoom(String nameRoom)
+        {
+            DataTable data = new DataTable();
+            string query = String.Format("select * from Room where NameRoom=N'{0}'",nameRoom);
+            data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+        //Chat offline
+        public void insertMessage(String myName, String RecipientName, string mess)
+        {
+            String query = String.Format("insert into Message Values(N'{0}',N'{1}',N'{2}')", myName, RecipientName, mess);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
         public bool Login(string name, string password)
         {
-            String query = "select * from Account where name=N'"+name+"' and password=N'"+password+"'";
-          DataTable result=  DataProvider.Instance.ExecuteQuery(query);
+            String query = "select * from Account where name=N'" + name + "' and password=N'" + password + "'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result.Rows.Count > 0;
         }
-        public void insertUser(String name,string pass)
+        public void insertUser(String name, string pass)
         {
-            string query = String.Format("insert into Account values (N'{0}',N'{1}',0,0)",name,pass);
+            string query = String.Format("insert into Account values (N'{0}',N'{1}',0,0)", name, pass);
             DataProvider.Instance.ExecuteNonQuery(query);
         }
         public bool checkUser(String name)
@@ -61,7 +61,7 @@ namespace Chat_Application_DaiHocDaLat.DAL
         {
             DataTable data = new DataTable();
             string query = "select name from Account where role=0";
-            data =DataProvider.Instance.ExecuteQuery(query);
+            data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
         //Chat room
@@ -70,9 +70,9 @@ namespace Chat_Application_DaiHocDaLat.DAL
             String query = String.Format("insert into Room values (N'{0}',N'')", nameRoom);
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-        public void insertClientRoom(String nameRoom,String nameClient)
+        public void insertClientRoom(String nameRoom, String nameClient)
         {
-            String query = String.Format("insert into Room values (N'{0}',N'{1}')", nameRoom,nameClient);
+            String query = String.Format("insert into Room values (N'{0}',N'{1}')", nameRoom, nameClient);
             DataProvider.Instance.ExecuteNonQuery(query);
         }
         public DataTable DisPlayNameRoom()
@@ -89,20 +89,18 @@ namespace Chat_Application_DaiHocDaLat.DAL
             data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
-        public bool checkClientNameRoom(String nameRoom,String nameClient)
+        public bool checkClientNameRoom(String nameRoom, String nameClient)
         {
-            String query =String.Format("select * from Room where NameRoom=N'{0}' and name=N'{1}'",nameRoom,nameClient);
+            String query = String.Format("select * from Room where NameRoom=N'{0}' and name=N'{1}'", nameRoom, nameClient);
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result.Rows.Count > 0;
         }
-        public bool FindNameRoom(String nameRoom)
+        public bool FindNameRooms(String nameRoom)
         {
             String query = String.Format("select * from Room where NameRoom=N'{0}'", nameRoom);
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result.Rows.Count > 0;
         }
-       
 
     }
-    }
-
+}

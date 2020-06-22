@@ -71,8 +71,15 @@ namespace Server.Views
                     //Client ngắt kết nối
                     else if (text.Contains("$$"))
                     {
-                       // lb_ClientOnline.Items.Remove((text.Substring(0, 5) + current.RemoteEndPoint).ToString());
+                        for(int it=0;it<lb_ClientOnline.Items.Count;it++)
+                        {
+                            if (lb_ClientOnline.Items[it].Text.Contains(text.Substring(0, 5)))
+                            {
+                                lb_ClientOnline.Items.RemoveAt(it);
+                            }
+                        }
                         lvChatServer.Items.Add(text);
+                        
                         current.Close();
                     }
                     //Chat client

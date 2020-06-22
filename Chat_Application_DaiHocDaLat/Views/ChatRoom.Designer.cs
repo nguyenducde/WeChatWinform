@@ -34,6 +34,8 @@
             this.txt_Chat_Room = new System.Windows.Forms.TextBox();
             this.lb_ThanhVienNhom = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnThemBanBe = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,19 +88,35 @@
             // 
             this.lb_ThanhVienNhom.FormattingEnabled = true;
             this.lb_ThanhVienNhom.ItemHeight = 16;
-            this.lb_ThanhVienNhom.Location = new System.Drawing.Point(554, 101);
+            this.lb_ThanhVienNhom.Location = new System.Drawing.Point(554, 197);
             this.lb_ThanhVienNhom.Name = "lb_ThanhVienNhom";
-            this.lb_ThanhVienNhom.Size = new System.Drawing.Size(147, 308);
+            this.lb_ThanhVienNhom.Size = new System.Drawing.Size(147, 212);
             this.lb_ThanhVienNhom.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(551, 79);
+            this.label1.Location = new System.Drawing.Point(560, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Thành viên nhóm";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(520, 95);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(100, 22);
+            this.txtTimKiem.TabIndex = 3;
+            // 
+            // btnThemBanBe
+            // 
+            this.btnThemBanBe.Location = new System.Drawing.Point(642, 85);
+            this.btnThemBanBe.Name = "btnThemBanBe";
+            this.btnThemBanBe.Size = new System.Drawing.Size(83, 42);
+            this.btnThemBanBe.TabIndex = 4;
+            this.btnThemBanBe.Text = "Thêm bạn bè";
+            this.btnThemBanBe.UseVisualStyleBackColor = true;
             // 
             // ChatRoom
             // 
@@ -106,6 +124,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 442);
+            this.Controls.Add(this.btnThemBanBe);
+            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_ThanhVienNhom);
             this.Controls.Add(this.panel1);
@@ -129,5 +149,7 @@
         private System.Windows.Forms.ListBox lv_ChatRoom;
         private System.Windows.Forms.ListBox lb_ThanhVienNhom;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button btnThemBanBe;
     }
 }

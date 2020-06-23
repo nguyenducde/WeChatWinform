@@ -43,11 +43,13 @@
             this.lb_ClientOnline = new System.Windows.Forms.ListBox();
             this.txtChat = new System.Windows.Forms.TextBox();
             this.lbOnl = new System.Windows.Forms.Label();
+            this.btnXemOffline = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnXemOffline);
             this.panel1.Controls.Add(this.lv_ChatClient);
             this.panel1.Controls.Add(this.bunifuosSwitch);
             this.panel1.Controls.Add(this.lbListRoom);
@@ -200,7 +202,7 @@
             this.lb_ClientOnline.Location = new System.Drawing.Point(25, 50);
             this.lb_ClientOnline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_ClientOnline.Name = "lb_ClientOnline";
-            this.lb_ClientOnline.Size = new System.Drawing.Size(172, 364);
+            this.lb_ClientOnline.Size = new System.Drawing.Size(172, 310);
             this.lb_ClientOnline.TabIndex = 43;
             this.lb_ClientOnline.SelectedIndexChanged += new System.EventHandler(this.lb_ClientOnline_SelectedIndexChanged);
             // 
@@ -225,6 +227,15 @@
             this.lbOnl.Size = new System.Drawing.Size(148, 31);
             this.lbOnl.TabIndex = 41;
             this.lbOnl.Text = "Thành viên";
+            // 
+            // btnXemOffline
+            // 
+            this.btnXemOffline.Location = new System.Drawing.Point(53, 389);
+            this.btnXemOffline.Name = "btnXemOffline";
+            this.btnXemOffline.Size = new System.Drawing.Size(130, 23);
+            this.btnXemOffline.TabIndex = 54;
+            this.btnXemOffline.Text = "Xem offline";
+            this.btnXemOffline.UseVisualStyleBackColor = true;
             // 
             // MainClient
             // 
@@ -259,5 +270,6 @@
         private System.Windows.Forms.Label lbOnl;
         private System.Windows.Forms.TextBox txtChat;
         private System.Windows.Forms.ListBox lv_ChatClient;
+        private System.Windows.Forms.Button btnXemOffline;
     }
 }

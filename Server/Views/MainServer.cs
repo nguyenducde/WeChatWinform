@@ -116,7 +116,7 @@ namespace Server.Views
                     else if(text.Contains("*t*"))
                     {
                         string nameRoom = text.Remove(0, 19).Substring(0, 7);
-                        string nameClient = text.Remove(0, 3).Substring(0, 5);
+                        string nameClient = text.Remove(0, 69);
                         if (BllServer.Instance.Server.checkClientNameRoom(nameRoom,nameClient ))
                         {
                             for (int i = 0; i < lb_ClientOnline.Items.Count; i++)

@@ -99,7 +99,7 @@ namespace Chat_Application_DaiHocDaLat.Views
         {
             if(txtTimKiem.Text!="")
             {
-                MainClient.ClientSocket.Send(PhanManh("*t*" +Text+ txtTimKiem.Text));
+                MainClient.ClientSocket.Send(PhanManh("*t*" +Text+txtTimKiem.Text));
             }
         }
         

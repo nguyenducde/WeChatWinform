@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using Chat_Application_DaiHocDaLat.BLL;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -48,6 +49,9 @@ namespace Chat_Application_DaiHocDaLat.Views
                 String locChuoi = Text.Remove(0, 13).Substring(0, 5) + " :" + Text.Remove(5, 13);
                 MainClient.ClientSocket.Send(PhanManh(locChuoi + " ChatClient " + txt_Chat_User.Text));
                 lv_ChatUserClient.Items.Add("Tôi:" + txt_Chat_User.Text);
+                String myName = Text.Remove(0, 13).Substring(0, 5);
+                String NameReceive = Text.Remove(0, 32);
+                //BllClient.Instance.Client.insertMessage(myName, NameReceive, txt_Chat_User.Text);
                 txt_Chat_User.Text = "";
                 
 

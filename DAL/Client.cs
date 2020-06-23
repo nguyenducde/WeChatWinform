@@ -90,8 +90,14 @@ namespace Chat_Application_DaiHocDaLat.DAL
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result.Rows.Count > 0;
         }
-       
+        public void insertMessage(String myName,String NameReceive,String Message)
+        {
+            String query = String.Format("insert into  Message values(N'{0}',N'{1}',N'{2}')", myName,NameReceive,Message);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+
+
 
     }
-    }
+}
 

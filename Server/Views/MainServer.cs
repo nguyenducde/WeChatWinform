@@ -216,7 +216,8 @@ namespace Server.Views
         {
             for (int i = 0; i < clientSockets.Count; i++)
             {
-                clientSockets[i].Send(PhanManh("Server: " + txtChat.Text));
+                clientSockets[i].Send(PhanManh("Server: " + 
+                    txtChat.Text));
 
             }
         }
@@ -230,6 +231,7 @@ namespace Server.Views
                 socket.Shutdown(SocketShutdown.Both);
                 socket.Close();
             }
+
 
             serverSocket.Close();
         }

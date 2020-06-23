@@ -203,7 +203,7 @@ namespace Chat_Application_DaiHocDaLat.Views
                     //Thêm bạn bè vào room
                     else if(message.Contains("BzboxThongbao"))
                     {
-                        MessageBox.Show("Một người bạn của bản đã thêm bạn vào nhóm "+message.Substring(0,7));
+                        MessageBox.Show("Một người đã thêm bạn vào nhóm "+message.Substring(0,7));
                     }
                     else if (message.Contains("ServerClosed"))
                     {
